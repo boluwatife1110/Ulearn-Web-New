@@ -7,7 +7,7 @@ closeMenuIcon.addEventListener("click", closeMenu)
 
 function openMenu(){
     navEl.style.display = "flex"
-    navEl.style.transform = "translatex(2px)"
+    navEl.style.transform = "translateY(2px)"
     closeMenuIcon.style.display = "block"
     menuIcon.style.display = "none"
 
