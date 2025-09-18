@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --ulearn-purple: #4d3f71;
+  --ulearn-green: #1aa8ab;
+  --ulearn-light-blue: #e6f0f0;
+  --ulearn-white: #fbfbfb;
+  --ulearn-sky-blue: #E8F2F2;
+  --ulearn-placeholder-grey: #7b7b7b;
+  --ulearn-border-color: #D3DEE8;
+}
+
+/* CSS RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* UTILITIES */
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px ;
+}
+body {
+  font-size: 1.8rem;
+  background-color: var(--ulearn-white);
+}
+img {
+  width: 100%;
+}
+.px-80 {
+  padding-left: 8rem; /* 8 * 10px == 80px */
+  padding-right: 8rem;
+}
+.contain {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADER STYLING */
+header {
+  padding: 1.8rem 4rem;
+}
+.header-ctn {
+  /* border: 1px solid red; */
+  display: flex;
+  /* gap: 100px; */
+  justify-content: space-between;
+  align-items: center;
+}
+#logo-ctn {
+  width: 12.4rem;
+  height: 2.8rem;
+}
+nav {
+  display: flex;
+  gap: 9.3rem;
+  align-items: center;
+   transition: all 1s;
+}
+nav > ul {
+  display: flex;
+  gap: 3rem;
+}
+nav a {
+  color: #000;
+}
+#auth-ctn {
+  display: flex;
+  gap: 3rem;
+}
+.auth-btns {
+  /* border: 1px solid; */
+  /* width: ; */
+  padding: 1.4rem 5.4rem;
+}
+.auth-btns#login {
+  border: 3px solid var(--ulearn-purple);
+  color: var(--ulearn-purple);
+}
+.auth-btns.green-bg-btn {
+  background-color: var(--ulearn-green);
+  color: #fff;
+}
+
+/* HERO SECTION STYLING */
+#hero-section {
+  background: var(--ulearn-light-blue);
+  position: relative;
+  z-index: -5;
+}
+#hero-section::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(images/bg-image.png) center center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  /* background-image: url('images/bg-image.png');
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    */
+}
+#hero-ctn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 0;
+}
+#hero-textCtn{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#hero-textCtn h1{
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+#hero-textCtn a{
+  width: fit-content;
+}
+#hero-Imgctn {
+  width: 58.2rem;
+}
+#special-text{
+  position: relative;
+}
+#special-text::after{
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: var(--ulearn-purple);
+  z-index: -2;
+}
+
+/* LEARNING SECTION STYLING */
+#learning-program{
+  padding: 6rem 0;
+}
+#learning-program h2{
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 500;
+}
+#learning-program > div{
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 6.3rem;
+  
+}
+.learning-cards{
+  width: 44.7rem;
+  text-align: center;
+}
+
+/* COURSES SECTION */
+#courses-section{
+  background-color: var(--ulearn-sky-blue);
+  padding: 5.5rem 0;
+}
+#top-ctn{
+  display: flex;
+}
+#top-ctn h2{
+  font-size: 5rem;
+  font-weight: 600;
+  width: 50%;
+}
+#top-img-ctn{
+  height: auto;
+  width: 63rem;
+}
+#top-img-ctn img{
+  width: 100%;
+  height: 100%;
+}
+#courses-section > div{
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+#bottom-ctn{
+  display: flex;
+  gap: 3rem;
+}
+.courses-card{
+  width: 29rem;
+}
+.courses-card > div{
+  height: 23.6rem;
+  position: relative;
+}
+.courses-card img{
+  height: 100%;
+}
+.courses-card > p{
+  margin-top: 2.2rem;
+}
+.courses-card button{
+  border: none;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 17px;
+  right: 17px;
+}
+#arrow-ctn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+#arrow-ctn p{
+  color: var(--ulearn-green);
+  font-weight: 600;
+  font-size: 5rem;
+  border: 3px solid var(--ulearn-green);
+  width: 5.6rem;
+  height: 5.6rem;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTACT SECTION */
+#contact-section{
+  padding: 6rem 0;
+  background-color: var(--ulearn-white);
+}
+#contact-section h2{
+  text-transform: capitalize;
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+}
+#contact-section > div{
+  display: flex;
+  gap: 7.6rem;
+  margin-top: 4.8rem;
+}
+#contact-img-ctn img{
+  height: 100%;
+}
+#form-ctn{
+  width: 50%;
+}
+form{
+  border: 1px solid #D3DEE8;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    "fullName email"
+    "subject subject"
+    "comment comment"
+  ;
+  gap: 2rem;
+  padding: 4rem;
+  background: #fff;
+}
+.input-control{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+.input-control input, .input-control textarea{
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: 1px solid #D3DEE8;
+}
+.input-control input::placeholder, .input-control > textarea::placeholder{
+  font-family: "Poppins", sans-serif;
+  color: var(--ulearn-placeholder-grey);
+}
+.input-control textarea{
+  height: 21.4rem;
+}
+.input-control:nth-of-type(1){
+  grid-area: fullName;
+}
+.input-control:nth-of-type(2){
+  grid-area: email;
+}
+.input-control:nth-of-type(3){
+  grid-area: subject;
+}
+.input-control:nth-of-type(4){
+  grid-area: comment;
+}
+form button{
+  border: none;
+  font-size: 1.8rem;
+}
+
+/* FOOTER STYLING */
+footer{
+  background-color: var(--ulearn-purple);
+  color: #fff;
+  padding: 6.3rem 0 4rem;
+}
+#footer-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+   margin-bottom: 5rem;
+}
+.footer-image{
+  width: 10.24rem;
+}
+h3{
+  font-size: 2.6rem;
+  font-weight: 600;
+  
+}
+li{
+  font-size: 2rem;
+  font-weight: 300;
+ 
+}
+#footer-socials{
+  display: flex;
+ gap: 80rem; 
+  margin-top: 2.5rem;
+}
+#course-date{
+  width: 12.86rem;
+}
+#social-details{
+  width: 10.9rem;
+}
+
+/* LEARNING */
+#traning-section{
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+#desing-image{
+  margin-bottom: 5.2rem;
+}
+#courses-flex{
+  display: flex;
+  gap: 8.8rem;
+  margin-bottom: 6.3rem;
+}
+#courses-logo{
+  height: auto;
+  padding: 3rem;
+}
+.curses-info{
+  font-size: 3rem;
+  border: solid 1px var(--ulearn-border-color);
+  padding: 3rem;
+
+}
+#pay{
+  width: 100%
+}
+#amount{
+  width: 48rem;
+  height: 20.49rem;
+  padding: 3rem;
+  font-size: 3rem;
+  border: solid 1px var(--ulearn-border-color);
+  margin-bottom: 2rem;
+}
+.course-info-text{
+  font-weight: 600;
+}
+#Duration{
+  margin-bottom: 3rem;
+}
+#payment-info{
+  font-size: 1.2rem;
+  margin-bottom: 1.9rem;
+}
+#live-class{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* courses */
+#welcome-back{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+}
+#welcome-back-h2{
+  font-size: 2.6rem;
+  margin-bottom: 6rem;
+}
+#f-n{
+  color: var(--ulearn-green);
+}
+#harmburger-menu{
+   /* border: solid 1px red;   */
+  color: black;
+  padding: 2rem 5rem 0rem 2rem;
+  width: 20.26rem;
+  height: 22.95rem;
+  box-shadow:  -0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  
+ 
+}
+
+#harmburger-menu li  {
+  /* border: solid 1px red; */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+div a {
+  color: var(--ulearn-green);
+}
+.slot{
+  font-size: 2.8rem;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+  margin-bottom: 3.9rem;
+}
+#home-s{
+  border-bottom: solid 3px #000;
+  
+}
+.courses-list{
+  /* background-color: var(--ulearn-sky-blue); */
+  padding: 3.9rem 0;
+}
+.courses-list > div{
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+#courses-footer{
+  margin-top: 50rem;
+}
+
+
+/* Payment Page */
+
+.card{
+  width: 400px;
+  background-color: var(--ulearn-white);
+    padding: 2.4rem;
+  margin: 5rem auto;
+  border-radius: 10px;
+  border: solid 1px var(--ulearn-purple);
+  text-align: center;
+}
+.payment-type{
+  display: block;
+  background-color:var(--ulearn-green);
+  color: white;
+   padding: 2rem;
+   margin-top: 3rem;
+  border-radius: 1rem;
+  font-weight: 400;
+}
+
+#payment-header{
+  font-weight: 600;
+  margin-bottom: 6rem;
+  text-align: left;
+} 
